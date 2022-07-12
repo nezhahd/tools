@@ -9,7 +9,9 @@
  6. WARP脚本
  0. 退出脚本 
 
-
+```
+bash <(curl -sSL https://github.com/nezhahd/tools/raw/main/tools.sh)
+```
 
 ```
 bash <(curl -sSL https://gitlab.com/rwkgyg/ygkkktools/raw/main/tools.sh)
