@@ -78,7 +78,7 @@ back(){
 white "------------------------------------------------------------------------------------------------"
 white " 回主菜单，请按任意键"
 white " 退出脚本，请按Ctrl+C"
-get_char && bash <(curl -sSL https://cdn.jsdelivr.net/gh/kkkyg/kkkyg/ygkkktools.sh)
+get_char && bash <(curl -sSL https://gitlab.com/rwkgyg/ygkkktools/raw/main/tools.sh)
 }
 
 root(){
@@ -105,6 +105,7 @@ service apache2 stop >/dev/null 2>&1
 systemctl disable apache2 >/dev/null 2>&1
 fi
 green "关闭VPS防火墙、开放端口规则执行完毕"
+back
 }
 
 bbr(){
@@ -152,12 +153,13 @@ v46=`curl -s https://ip.gs -k`
 [[ $v46 =~ '.' ]] && green "当前VPS本地为IPV4优先：$v46" || green "当前VPS本地为IPV6优先：$v46"
 back;;
 0 ) 
-bash <(curl -sSL https://raw.githubusercontent.com/kkkyg/kkkyg/main/VPStools.sh)
+bash <(curl -sSL https://gitlab.com/rwkgyg/ygkkktools/raw/main/tools.sh)
 esac
 }
 
 acme(){
 bash <(curl -sSL https://gitlab.com/rwkgyg/acme-script/raw/main/acme.sh)
+back
 }
 
 screen(){
